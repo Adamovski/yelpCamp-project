@@ -8,13 +8,16 @@ const express = require("express"),
     seedDB = require("./seeds"),
     User = require("./models/user"),
     methodOverride = require("method-override");
+    
 // REQUIRING ROUTES
 const commentRoutes = require("./routes/comments"),
     campgroundRoutes = require("./routes/campgrounds"),
     indexRoutes = require("./routes/index");
 // mongodb://localhost/yelp_camp
+var url=process.env.DATABASEURL || "mongodb://localhost/yelp_camp";
 console.log(process.env.DATABASEURL);
-mongoose.connect(process.env.DATABASEURL, { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false });
+
+mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false });
 // mongoose.connect("mongodb+srv://AdamTarnowski:Rusty_2019@cluster0-bavb7.mongodb.net/test?retryWrites=true&w=majority", { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false });
 
 app.use(bodyParser.urlencoded({ extended: true }));
