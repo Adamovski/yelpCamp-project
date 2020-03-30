@@ -2,6 +2,10 @@
 
 A project based on yelp built during a Udemy course to learn the basics of both front end and back end. Technologies used include html, css, node.js, express and mongoDB.
 
+The project can be found here 
+
+https://peaceful-yelp-camp.herokuapp.com/
+
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
